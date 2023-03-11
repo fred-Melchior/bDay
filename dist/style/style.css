@@ -1,7 +1,94 @@
+.hero {
+  background-image: url("../7B389A6E-6F84-4987-85D0-987CDEE6CDF3_1_105_c.5a3c8db4.jpeg");
+  background-position: center;
+  background-size: cover;
+  padding: 80px 24px;
+}
+
+.hero .container {
+  text-align: center;
+}
+
+.event {
+  background-image: linear-gradient(#000, #f0f);
+}
+
+.event--img-left {
+  background-image: linear-gradient(#f0f, #000);
+}
+
+.event--img-left .container {
+  flex-direction: row-reverse;
+}
+
+.event .container {
+  gap: 40px;
+  padding: 16px;
+  display: flex;
+}
+
+.event__text {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.event__text__text {
+  padding: 32px 0;
+}
+
+.event__text .button {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.event__img {
+  width: 320px;
+  border-radius: 8px;
+}
+
+.footer {
+  background-image: linear-gradient(#f0f, #000);
+}
+
+.footer .container {
+  text-align: center;
+  padding: 40px;
+}
+
 * {
   box-sizing: border-box;
+  color: #fff;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 64px;
+}
+
+.text {
+  font-size: 32px;
+}
+
+.button {
+  cursor: pointer;
+  background-image: linear-gradient(green, #000);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.button:hover {
+  background-image: linear-gradient(#000, green);
 }
 
 /*# sourceMappingURL=style.css.map */

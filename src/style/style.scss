@@ -1,5 +1,38 @@
+@use 'hero';
+@use 'event';
+@use 'footer';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 64px;
+}
+
+.text{
+    font-size: 32px;
+}
+
+.button{
+    background-image: linear-gradient(green, black);
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid white;
+    cursor: pointer;
+
+    &:hover{
+        background-image: linear-gradient(black, green);
+    }
 }

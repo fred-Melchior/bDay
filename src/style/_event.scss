@@ -1,0 +1,36 @@
+.event{
+    background-image: linear-gradient(black, magenta);
+
+    &--img-left{
+        background-image: linear-gradient(magenta, black );
+
+        .container{
+            flex-direction: row-reverse;
+        }
+    }
+    
+    .container{
+        display: flex;
+        padding: 16px;
+        gap: 40px;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__text{
+            padding: 32px 0;
+        }
+
+        .button{
+            max-width: fit-content;
+        }
+    }
+
+    &__img{
+        width: 320px;
+        border-radius: 8px;
+    }
+}

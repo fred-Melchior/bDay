@@ -557,6 +557,22 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"g54gV":[function(require,module,exports) {
+const dataEvento = new Date("Jul 7, 2023 12:00:00");
+const timeStampEvento = dataEvento.getTime();
+const contaTempo = setInterval(function() {
+    const agora = new Date();
+    const timeStampAtual = agora.getTime();
+    const ateOevento = timeStampEvento - timeStampAtual;
+    const diasEvento = Math.floor(ateOevento / 86400000);
+    const horasEvento = Math.floor(ateOevento % 86400000 / 3600000);
+    const minutosEvento = Math.floor(ateOevento % 3600000 / 60000);
+    const segundosEvento = Math.floor(ateOevento % 60000 / 1000);
+    document.getElementById("contador").innerHTML = `${diasEvento}d ${horasEvento}h ${minutosEvento}m ${segundosEvento}s`;
+    if (ateOevento < 0) {
+        clearInterval(contaTempo);
+        document.getElementById("contador").innerHTML = "J\xe1 foi!";
+    }
+}, 1000);
 
 },{}]},["9zsBP","g54gV"], "g54gV", "parcelRequire46a7")
 

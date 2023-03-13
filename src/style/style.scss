@@ -1,11 +1,13 @@
 @use 'hero';
 @use 'event';
 @use 'footer';
+@use 'var';
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
     list-style: none;
     text-decoration: none;
     color: #fff;
@@ -15,6 +17,13 @@
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 640px) {
+        width: 80%;
+    }
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
 }
 
 .title{
@@ -26,13 +35,16 @@
 }
 
 .button{
-    background-image: linear-gradient(green, black);
-    padding: 8px;
-    border-radius: 8px;
-    border: 2px solid white;
     cursor: pointer;
-
+    img{
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+    }
     &:hover{
-        background-image: linear-gradient(black, green);
+        img{
+            width: 64px;
+            height: 64px;
+        }
     }
 }

@@ -1,18 +1,21 @@
+@use 'var';
+
 .event{
-    background-image: linear-gradient(black, magenta);
+    padding: 40px;
 
-    &--img-left{
-        background-image: linear-gradient(magenta, black );
-
-        .container{
-            flex-direction: row-reverse;
-        }
-    }
+    &--convite{background-image: linear-gradient(black ,var.$corA, var.$corB);}
+    &--local{background-image: linear-gradient(var.$corB, var.$corC);}
+    &--sobre{background-image: linear-gradient(var.$corC, var.$corD);}
+    &--gracias{background-image: linear-gradient(var.$corD, var.$corE);}
     
     .container{
         display: flex;
         padding: 16px;
         gap: 40px;
+
+        &--img-left{
+            flex-direction: row-reverse;
+        }
     }
 
     &__text{
@@ -20,17 +23,48 @@
         flex-direction: column;
         justify-content: center;
 
+        &__title{
+            font-weight: 700;
+            font-size: 40px;
+        }
+
         &__text{
+            font-size: 24px;
             padding: 32px 0;
         }
 
         .button{
-            max-width: fit-content;
+            margin: 0 auto;
         }
     }
 
     &__img{
         width: 320px;
-        border-radius: 8px;
+        border-radius: 50%;
     }
+
+    @media (max-width: 640px) {
+
+        .container{
+            display: block;
+        }
+
+        &__img{
+            width: 240px;
+        }
+
+        &__text{
+            display: block;
+            margin-bottom: 24px;
+
+            &__title{
+                font-size: 32px;
+            }
+
+            .button{
+                margin-left: 88px;
+            }
+        }
+    }
+
 }

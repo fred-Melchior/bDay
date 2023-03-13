@@ -1,7 +1,15 @@
+@use 'var';
+
 .footer{
-    background-image: linear-gradient(magenta, black);
+    background-image: linear-gradient(var.$corE, black);
     .container{
         padding: 40px;
         text-align: center;
+    }
+
+    @media (max-width: 640px) {
+        .container{
+            padding: 24px;
+        }
     }
 }
